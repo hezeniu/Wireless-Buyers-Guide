@@ -3,7 +3,7 @@ const {
 } = require('../package')
 
 module.exports = {
-    title: 'Wireless Buyers Guide',
+    title: '无线购买指南',
     head: [
         ['meta', {
             name: 'theme-color',
@@ -55,43 +55,43 @@ module.exports = {
 
     themeConfig: {
         lastUpdated: true,
-        repo: 'https://github.com/dortania/Wireless-Buyers-Guide',
+        repo: 'https://github.com/sumingyd/Wireless-Buyers-Guide',
         editLinks: true,
-        editLinkText: 'Help us improve this page!',
+        editLinkText: '帮助我们改进此页!',
         logo: '/homepage.png',
         nav: [{
-            text: 'Dortania Guides',
+            text: '指南菜单',
             ariaLabel: 'Language Menu',
             items: [{
                 text: 'Home Site',
-                link: 'https://dortania.github.io/'
+                link: 'https://sumingyd.github.io/'
             },
             {
                 text: 'Getting Started With ACPI',
-                link: 'https://dortania.github.io/Getting-Started-With-ACPI/'
+                link: 'https://sumingyd.github.io/Getting-Started-With-ACPI/'
             },
             {
                 text: 'OpenCore Install Guide',
-                link: 'https://dortania.github.io/OpenCore-Install-Guide/'
+                link: 'https://sumingyd.github.io/OpenCore-Install-Guide/'
             },
             {
                 text: 'OpenCore Post-Install',
-                link: 'https://dortania.github.io/OpenCore-Post-Install/'
+                link: 'https://sumingyd.github.io/OpenCore-Post-Install/'
             },
             {
                 text: 'GPU Buyers Guide',
-                link: 'https://dortania.github.io/GPU-Buyers-Guide/'
+                link: 'https://sumingyd.github.io/GPU-Buyers-Guide/'
             },
             {
                 text: 'Anti Buyers Guide',
-                link: 'https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/'
+                link: 'https://sumingyd.github.io/Anti-Hackintosh-Buyers-Guide/'
             },
             ]
         },
             /*
               {
                 text: 'Github',
-                link: 'https://github.com/dortania/OpenCore-Install-Guide'
+                link: 'https://github.com/sumingyd/OpenCore-Install-Guide'
               }
             */
         ],
