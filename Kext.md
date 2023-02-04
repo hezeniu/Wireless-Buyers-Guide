@@ -1,4 +1,4 @@
-# When and what kexts to use
+# 何时和使用什么kext
 
 * [Broadcom](#broadcom)
 * [Intel](#intel)
@@ -8,49 +8,49 @@
 
 ### [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 
-This is needed to fix wifi on many Broadcom cards, while not all of them need them it's generally required when using non-apple manufactured wireless cards. This also has the added functionality of injecting old Broadcom kexts into newer versions of macOS.
+许多Broadcom卡都需要这个功能来修复wifi问题，但不是所有的卡都需要这个功能，一般使用非苹果公司生产的无线网卡时都需要这个功能。这还增加了将旧的Broadcom kext注入到新版本macOS的功能。
 
-* Note: Apple AirPort and Fenvi cards do not need this kext
+* 注意:Apple AirPort和Fenvi卡不需要这个kext
 
 ### [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases)
 
-Required for all non-Apple manufactured wireless cards due to how firmware is handled. This is actually a bundle of multiple kexts:
+由于固件的处理方式，所有非苹果公司生产的无线网卡都需要安装。这实际上是一个包含多个kext的包:
 
 * BrcmBluetoothInjector
-  * Do not use with macOS 12, use BlueToolFixup instead
-  * If you dual boot both macOS 11 or under and macOS 12, `MinKernel` and `MaxKernel` under `Kernel -> Add` in your config can be used to load one kext or the other in a specific OS
+  * 不要在macOS 12中使用，而是使用BlueToolFixup
+  * 如果你同时启动macOS 11或以下和macOS 12，配置文件中`Kernel -> Add`下的`MinKernel`和`MaxKernel`可以用来在特定的操作系统中加载一个或另一个kext
 * BrcmFirmwareData
 * BrcmPatchRAM fix:
-  * BrcmPatchRAM3 for macOS 10.14+ (must be paired with BrcmBluetoothInjector unless on macOS 12)
-  * BrcmPatchRAM2 for macOS 10.11-10.14
-  * BrcmPatchRAM for macOS 10.10 and older
+  * macOS 10.14+的BrcmPatchRAM3(必须与BrcmBluetoothInjector配对，除非macOS 12)
+  * macOS 10.11-10.14的BrcmPatchRAM2
+  * macOS 10.10及更早版本的BrcmPatchRAM
 * BlueToolFixup:
-  * Used in place of BrcmBluetoothInjector on macOS 12
-  * See above dual booting note
+  * 在macOS 12上用于替代brcmbluetooth oothinjector
+  * 参见上面的双启动说明
 
-Note:
+注意:
 
-* Apple AirPort and Fenvi cards do not need these kexts
-* OpenCore order: BrcmBluetoothInjector or BlueToolFixup -> BrcmFirmwareData -> BrcmPatchRAM
+* Apple AirPort和Fenvi卡不需要这些kext
+* OpenCore顺序:BrcmBluetoothInjector或BlueToolFixup - > BrcmFirmwareData - > BrcmPatchRAM
 
 ## Intel
 
 ### [itlwm](https://github.com/OpenIntelWireless/itlwm)
 
 * [itlwm](https://github.com/OpenIntelWireless/itlwm)
-  * itlwm.kext uses Apple's IOEthernet, is more stable than AirportItlwm.kext, and is completely based on open-source resources
-  * AirportItlwm.kext uses Apple's IO80211, which is less stable than itlwm.kext, but supports certain Continuity features
-  * Unfortunately, neither kext supports AirDrop; see here for features and limitations: [OpenIntelWireless](https://openintelwireless.github.io/)
+  * itlwm.kext使用苹果的IOEthernet，比AirportItlwm.kext更稳定，并且完全基于开源资源
+  * AirportItlwm.kext使用苹果的IO80211，其稳定性不如itlwm.kext，但支持某些连续性功能
+  * 不幸的是，两个kext都不支持AirDrop;有关功能和限制，请参阅这里:[OpenIntelWireless](https://openintelwireless.github.io/)
 
 ### [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases)
 
-Adds Bluetooth support to macOS when paired with an Intel wireless card
+当与英特尔无线网卡配对时，添加蓝牙支持到macOS
 
 ## Atheros
 
 ### [High Sierra's IO80211Family](https://github.com/khronokernel/IO80211-Patches/blob/main/10.13.6-High-Sierra-Kexts/IO80211HighSierra.kext.zip)
 
-This kext is required for all Atheros chipsets that had support dropped in Mojave, these include:
+所有在Mojave中支持的Atheros芯片组都需要这个kext，包括:
 
 * AR242x
 * AR542x
@@ -63,7 +63,7 @@ This kext is required for all Atheros chipsets that had support dropped in Mojav
 
 ### [ATH9KFixup](https://github.com/chunnann/ATH9KFixup)
 
-To be paired with AirPortAtheros40 to fix support for many unsupported Atheros cards, similar idea to AirportBrcmFixup:
+与airport40配对以修复许多不支持的Atheros卡的支持，类似于AirportBrcmFixup的想法:
 
 * AR946X (AR9462 & AR9463)
 * AR9485
@@ -71,4 +71,4 @@ To be paired with AirPortAtheros40 to fix support for many unsupported Atheros c
 
 ### [AthBluetoothFirmware](https://github.com/zxystd/AthBluetoothFirmware/releases)
 
-Required to ensure Bluetooth firmware is loaded correctly in macOS
+用于确保蓝牙固件在macOS中正确加载
