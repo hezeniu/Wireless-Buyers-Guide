@@ -1,23 +1,23 @@
-# USB
+# USB 卡
 
-While the worst option for wireless, this is one that not many people can choose to avoid due to either their wireless cards being soldered or not wanting to break their warranty to replace their card.
+虽然这是无线最糟糕的选择，但没有多少人可以选择避免，因为他们的无线卡被焊接，或者不想打破保修期来更换他们的卡。
 
-Things to keep in mind:
+需要记住的事情:
 
-* Features like AirDrop, Handoff, etc likely won't work
-* Not guaranteed to work 100%
-* Sleep can easily break
-* Need a separate adapter for Bluetooth
-* Most cards use a poorly made 32bit app to get wifi working(and you're reliant on the manufacturer to update their app for Catalina)
-* No Network support in recovery
+* 像 AirDrop, Handoff等功能可能不会起作用
+* 不能保证100%工作
+* 睡眠很容易中断
+* 需要一个单独的蓝牙适配器
+* 大多数卡使用制作粗糙的32位应用程序来连接wifi(你需要依赖制造商为Catalina更新他们的应用程序)
+* 恢复中没有网络支持
 
-And with all these issues it's quite hard to recommend a USB wireless card but there still is hope:
+考虑到这些问题，很难推荐USB无线网卡，但还是有希望的:
 
-# [Wireless-USB-Adapter](https://github.com/chris1111/Wireless-USB-Adapter) and [Wireless-USB-Big-Sur-Adapter](https://github.com/chris1111/Wireless-USB-Big-Sur-Adapter)
+# [无线USB适配器](https://github.com/chris1111/Wireless-USB-Adapter) 和 [无线USB Big-Sur适配器](https://github.com/chris1111/Wireless-USB-Big-Sur-Adapter)
 
-While not perfect, this might just be as close as we can get to "good" USB wireless thanks to it being kept up-to-date by [chris1111](https://github.com/chris1111)(So no 32-bit app crap) and supports a large variety of chipsets. Use Wireless-USB-Adapter on macOS 10.xx and Wireless-USB-Big-Sur-Adapter on macOS 11 and 12.
+虽然不是完美的，但这可能只是我们可以接近的“好的”USB无线，因为它保持最新的 [chris1111](https://github.com/chris1111)(So没有32位应用程序垃圾)，并支持各种芯片。在macOS 10上使用无线usb适配器。macOS 11和12上的无线usb大尺寸适配器。
 
-I've listed out all the chipsets that have been known good and you can see if yours matches any of these chipsets
+我已经列出了所有已知良好的芯片组，您可以看看您的芯片组是否与这些芯片组匹配
 
 * **RTL8188CUS**:
 
@@ -56,9 +56,9 @@ I've listed out all the chipsets that have been known good and you can see if yo
 
   * Linksys WUSB6300
 
-# [USB Wireless Utility](https://github.com/chris1111/USB-Wireless-Utility) and [D-Link Utility Package](https://github.com/chris1111/D-LinkUtility-Package)
+# [USB Wireless Utility](https://github.com/chris1111/USB-Wireless-Utility) 和 [D-Link Utility Package](https://github.com/chris1111/D-LinkUtility-Package)
 
-Just like [Wireless-USB-Adapter-Clover](https://github.com/chris1111/Wireless-USB-Adapter-Clover), WIFI-Dlink allows support for quite a few Mediatek/Ralink cards, but due to being a 32-bit app, it is unsupported on AMD systems. There's a newer version for Catalina which is 64-bit and perfect for AMD systems as well: [WIFI-Dlink Catalina-Panel](https://github.com/chris1111/WIFI-Dlink-Catalina-Panel)
+就像 [Wireless-USB-Adapter-Clover](https://github.com/chris1111/Wireless-USB-Adapter-Clover)一样，WIFI-Dlink允许支持相当多的联发科/雷凌卡，但由于是32位应用程序，它在AMD系统上不支持。有一个更新版本的Catalina，它是64位和完美的AMD系统以及:[WIFI-Dlink Catalina-Panel](https://github.com/chris1111/WIFI-Dlink-Catalina-Panel)
 
 * RT3572
 * RT3072
