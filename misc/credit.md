@@ -1,19 +1,19 @@
-# Credit
+# 贡献
 
-No good guide is made by one man, here's credit to those who've helped out:
+没有一个好的指南是由一个人完成的，这里要感谢那些帮助过我们的人:
 
 * [Midi](https://github.com/midi1996)
   * [Hackintosh FAQ: Wifi](https://www.reddit.com/r/hackintosh/wiki/faq#wiki_wifi_compatibility)
-  * Overall corrections
-  * Correction on BCM94352Z chipset
+  * 整体修正
+  * BCM94352Z芯片组的修正
 
 * [DhinakG](https://github.com/dhinakg)
-  * Corrections regarding DW1830
+  * 关于DW1830的更正
 
 * [Fewt](https://fewt.gitbook.io/laptopguide/)
-  * Added FV-HB1200
+  * 增加FV-HB1200
 
-Sources:
+来源：
 
 * [Intel Wireless List](https://www.intel.ca/content/www/ca/en/support/articles/000005511/network-and-i-o/wireless-networking.html)
 * [Wireless USB Adapter Clover](https://github.com/chris1111/Wireless-USB-Adapter-Clover)
