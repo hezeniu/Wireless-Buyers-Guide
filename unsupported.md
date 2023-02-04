@@ -1,29 +1,29 @@
-# Supported/Unsupported Chipsets
+# 支持/不支持的芯片组
 
-With macOS, there's a limited amount of supported hardware regardless of which category, and wireless cards are no different.
+在macOS中，无论是哪种类型，支持的硬件数量都是有限的，无线网卡也不例外。
 
-## Supported chipsets
+## 支持的芯片组
 
-### Big Sur (11) and Monterey (12) and older
+### Big Sur (11) 和 Monterey (12) 和更老的
 
 * BCM943602
 * BCM94360
 * BCM94352
 * BCM94350
 
-### Catalina (10.15) and older
+### Catalina (10.15) 和更老的
 
 * BCM943224
 * BCM94331
-  * May require you to force load IO80211Family.kext when running macOS Catalina; see `Kernel -> Force` in OpenCore for more details
-* All those mentioned in Big Sur are also supported in Catalina
+  * 可能需要你在运行macOS Catalina时强制加载IO80211Family.kext;更多细节请参阅OpenCore中的`Kernel -> Force`
+* 所有在 Big Sur 提到的都在 Catalina 得到支持
 
-### Mojave (10.14) and older
+### Mojave (10.14) 和更老的
 
 * BCM94322
-* All those mentioned in Catalina and newer are also supported in Mojave
+* 所有在 Catalina 和更新版本中提到的都在Mojave中得到支持
 
-### High Sierra (10.13) and older
+### High Sierra (10.13) 和更老的
 
 * AR242x
 * AR542x
@@ -33,9 +33,9 @@ With macOS, there's a limited amount of supported hardware regardless of which c
 * AR9285 - AR5B95
 * AR9287 - AR5B97
 * AR9380 - AR5BXB112
-* All those mentioned in Mojave and newer are also supported in High Sierra
+* 所有在Mojave和更新版本中提到的都在High Sierra中得到支持
 
-### El Capitan (10.11) and older
+### El Capitan (10.11) 和更老的
 
 * BCM4311
 * BCM4318
@@ -43,9 +43,9 @@ With macOS, there's a limited amount of supported hardware regardless of which c
 * BCM4309
 * BCM4321
 * BCM4322
-* All those mentioned in High Sierra and newer are also supported in El Capitan
+* 所有在High Sierra和更新版本中提到的内容在El Capitan中也得到了支持
 
-# Unsupported Chipsets
+# 不支持的芯片组
 
 ## Broadcom
 
@@ -61,4 +61,4 @@ With macOS, there's a limited amount of supported hardware regardless of which c
 
 ## Intel
 
-Currently no Intel chipsets are officially supported in macOS, however great work has been done in this space with itlwm: [Where's my Intel Wi-Fi?](../misc/intel.md):
+目前macOS中还没有官方支持的Intel芯片组，但是itlwm在这方面已经做了很多工作:[我的Intel Wi-Fi在哪里?](../misc/intel.md):
