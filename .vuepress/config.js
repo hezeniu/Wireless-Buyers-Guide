@@ -62,28 +62,25 @@ module.exports = {
         nav: [{
             text: '指南菜单',
             ariaLabel: 'Language Menu',
-            items: [{
-                text: 'Home Site',
-                link: 'https://sumingyd.github.io/'
-            },
+            items: [
             {
-                text: 'Getting Started With ACPI',
+                text: '开始使用ACPI',
                 link: 'https://sumingyd.github.io/Getting-Started-With-ACPI/'
             },
             {
-                text: 'OpenCore Install Guide',
+                text: 'OpenCore安装指南',
                 link: 'https://sumingyd.github.io/OpenCore-Install-Guide/'
             },
             {
-                text: 'OpenCore Post-Install',
+                text: 'OpenCore安装后',
                 link: 'https://sumingyd.github.io/OpenCore-Post-Install/'
             },
             {
-                text: 'GPU Buyers Guide',
+                text: '显卡购买指南',
                 link: 'https://sumingyd.github.io/GPU-Buyers-Guide/'
             },
             {
-                text: 'Anti Buyers Guide',
+                text: '避免购买指南',
                 link: 'https://sumingyd.github.io/Anti-Hackintosh-Buyers-Guide/'
             },
             ]
