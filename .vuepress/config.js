@@ -93,7 +93,7 @@ module.exports = {
             */
         ],
         sidebar: [{
-            title: 'Introduction',
+            title: '介绍',
             collapsable: false,
             sidebarDepth: 1,
             children: [
@@ -105,7 +105,7 @@ module.exports = {
 
         },
         {
-            title: 'Types of wireless card',
+            title: '无线网卡的类型',
             collapsable: false,
             sidebarDepth: 2,
             children: [
@@ -117,7 +117,7 @@ module.exports = {
             ]
         },
         {
-            title: 'Misc',
+            title: '杂项',
             collapsable: false,
             sidebarDepth: 2,
             children: [
