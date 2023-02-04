@@ -1,4 +1,4 @@
-# 迷你PCIe卡
+# mini PCIe卡
 
 所以mini PCIe对于那些没有M.2无线网络的老系统用户来说是最有用的。使用mini PCIe，你有几个选择:
 
