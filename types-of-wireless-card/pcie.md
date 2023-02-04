@@ -1,18 +1,18 @@
-# PCIe
+# PCIe卡
 
-By far the most popular option for desktop users has been to buy an old Apple AirPort wireless card and place it into a PCIe riser card. The benefits of this are that as long as the hardware works natively on a real Mac, it will work without any kexts/framework modifications. With PCIe, you have a couple of options:
+到目前为止，最受桌面电脑用户欢迎的选择是购买旧的苹果机场无线网卡，并将其放入PCIe riser卡中。这样做的好处是，只要硬件在真正的Mac上工作，它就可以在没有任何kext /框架修改的情况下工作。对于PCIe，你有以下几种选择。
 
-* Apple AirPort Card adapted to a full sized PCIe adapter (recommended)
-* Apple AirPort Card adapted to M.2 B+M Key (same as what NVMe SSDs use)
-* Apple AirPort Card adapted to M.2 A+E Key (same as what Intel wireless cards use)
-* Full sized PCIe wireless card
+* 适用于全尺寸PCIe适配器的苹果机场卡(推荐)
+* 适用于M.2 B+M Key的Apple AirPort卡(与NVMe ssd使用的相同)
+* 适用于M.2 A+E Key的Apple AirPort卡(与Intel无线卡相同)
+* 全尺寸PCIe无线卡
 
-Currently supported chipsets:
+目前支持的芯片组:
 
 * BCM943602CDP
 * BCM943602CD
 * BCM94360CD
-* BCM94331CD (may need to force the kext to load for Catalina\)
+* BCM94331CD (可能需要强制kext加载为 Catalina)
 * BCM94360CS2
 * BCM943602CS
 * BCM94360CSAX
@@ -20,50 +20,50 @@ Currently supported chipsets:
 * BCM94352Z
 * BCM94350ZAE
 
-# Supported (Full sized PCIe wireless card)
+# 支持(全尺寸PCIe无线网卡)
 
 * **BCM94360CD** (ABGN+AC):
 
-  * Fenvi FV T919 (Bluetooth 4.0)
-  * Fenvi AC1900 (No Bluetooth, EOL)
-  * TP-LINK Archer T9E AC1900 (No Bluetooth, EOL)
-  * TP-LINK Archer T8E (No Bluetooth)
-  * RNX-AC1900PCE (No Bluetooth)
-  * ASUS PCE-AC66 (No Bluetooth)
-  * ASUS PCE-AC68 (No Bluetooth)
+  * Fenvi FV T919 (蓝牙4.0)
+  * Fenvi AC1900 (无蓝牙，EOL)
+  * TP-LINK Archer T9E AC1900 (无蓝牙，EOL)
+  * TP-LINK Archer T8E (无蓝牙)
+  * RNX-AC1900PCE (无蓝牙)
+  * ASUS PCE-AC66 (无蓝牙)
+  * ASUS PCE-AC68 (无蓝牙)
 
 * **BCM94360CS2** (ABGN+AC):
 
-  * Fenvi FV-HB1200 (Bluetooth 4.0)
-  * AWD Wireless LAN Card (No Bluetooth)
+  * Fenvi FV-HB1200 (蓝牙4.0)
+  * AWD Wireless LAN Card (无蓝牙)
 
 * **BCM94352** (ABGN+AC):
 
-  * TP-LINK Archer T6 (No Bluetooth)
-  * Rosewill RNX-AC1300PCE (No Bluetooth)
-  * ASUS PCE-AC56 (No Bluetooth)
+  * TP-LINK Archer T6 (无蓝牙)
+  * Rosewill RNX-AC1300PCE (无蓝牙)
+  * ASUS PCE-AC56 (无蓝牙)
 
-All cards presented here besides the Apple AirPort and Fenvi cards require the following:
+除了Apple AirPort和Fenvi卡外，这里介绍的所有卡都需要满足以下要求:
 
 * [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup/releases)
 * [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases)
   * BrcmBluetoothInjector
-    * Do not use with macOS 12, use BlueToolFixup instead
-    * If you dual boot both macOS 11 or under and macOS 12, `MinKernel` and `MaxKernel` under `Kernel -> Add` in your config can be used to load one kext or the other in a specific OS
+    * 不要在macOS 12中使用，而是使用BlueToolFixup
+    * 如果你同时启动macOS 11或以下和macOS 12，配置文件中`Kernel -> Add`下的`MinKernel`和`MaxKernel`可以用来在特定的操作系统中加载一个或另一个kext
   * BrcmFirmwareData
   * BrcmPatchRAM fix:
-    * BrcmPatchRAM3 for macOS 10.14+ (must be paired with BrcmBluetoothInjector unless on macOS 12)
-    * BrcmPatchRAM2 for macOS 10.11-10.14
-    * BrcmPatchRAM for macOS 10.10 and older
+    * macOS 10.14+的BrcmPatchRAM3(必须与BrcmBluetoothInjector配对，除非macOS 12)
+    * macOS 10.11-10.14的BrcmPatchRAM2
+    * macOS 10.10及更早版本的BrcmPatchRAM
   * BlueToolFixup:
-    * Used in place of BrcmBluetoothInjector on macOS 12
-    * See above dual booting note
+    * 在macOS 12上用于替代brcmbluetooth oothinjector
+    * 参见上面的双启动说明
 
-# Older Models (unsupported in Mojave)
+# 旧型号(Mojave不支持)
 
-With these models, you'll need to reinject the old plugin your wireless card used in High Sierra to work in Mojave. There are a couple of different kexts to do this but generally, we recommend avoiding these cards unless absolutely necessary.
+使用这些型号，你需要重新插入你的无线卡在High Sierra使用的旧插件才能在Mojave工作。有几个不同的kext可以做到这一点，但一般来说，我们建议避免这些卡，除非绝对必要。
 
-**Note**: Injecting the kext into macOS Catalina is even more unstable, **highly encouraged to upgrade**
+**注意**:将kext注入macOS Catalina会更加不稳定，**强烈建议升级**
 
 * **Atheros 9380**:
   * TP-Link TL-WDN4800
