@@ -1,23 +1,23 @@
-# Mini PCIe
+# 迷你PCIe卡
 
-So mini PCIe is most useful for users with older systems that don't have M.2 based wireless. With mini PCIe you have a couple of options:
+所以mini PCIe对于那些没有M.2无线网络的老系统用户来说是最有用的。使用mini PCIe，你有几个选择:
 
-* Half sized mini PCIe
-* Full sized mini PCIe
-* Apple AirPort card adapted to full sized mini PCIe
+* 半尺寸的迷你PCIe
+* 全尺寸迷你PCIe
+* 适应全尺寸mini PCIe的Apple AirPort卡
 
-For older laptop users you'll generally be limited to half sized mini PCIe wireless cards due to space constraints, but for desktop users, it's recommended to buy an Apple AirPort Card with an adapter. The reason is that this avoids issues with PCI IDs not matching and not having drivers flags be set off, solutions are to force load the accompanying kext or modify the kext's PCI ID list to support your model.
+对于较老的笔记本电脑用户，由于空间限制，你通常只能使用一半大小的mini PCIe无线网卡，但对于台式机用户，建议购买带有适配器的苹果机场卡。原因是这避免了PCI ID不匹配和没有设置驱动程序标志的问题，解决方案是强制加载附带的kext或修改kext的PCI ID列表以支持您的型号。
 
-The other thing to note with mini PCIe is that some vendors have a whitelist on wireless cards installed, speciifcally that only their brand of cards will work. The system **won't even post** with a non-branded one installed, the main culprits:
+关于mini PCIe需要注意的另一件事是，一些供应商在无线卡上安装了白名单，特别是只有他们品牌的卡才能工作。系统**甚至不会发布**安装了非品牌的内容，主要的罪魁祸首是:
 
-* Lenovo (7th gen and older)
+* Lenovo (第7代及以上)
 * Toshiba
-* HP (3rd gen and older)
+* HP (第三代及以上)
 * Compaq
 
-There are some work arounds with [BIOS mods](https://medium.com/@p0358/removing-wlan-wwan-bios-whitelist-on-a-lenovo-laptop-to-use-a-custom-wi-fi-card-f6033a5a5e5a), though be careful as poor patching can in fact **brick your device**.
+[BIOS mods](https://medium.com/@p0358/removing-wlan-wwan-bios-whitelist-on-a-lenovo-laptop-to-use-a-custom-wi-fi-card-f6033a5a5e5a),有一些解决方法，但要小心，因为糟糕的补丁实际上会**影响你的设备**。
 
-# Supported
+# 支持
 
 * **BCM94360HMB** (ABGN+AC, BT 4.0, 3x3:3):
 
@@ -35,27 +35,27 @@ There are some work arounds with [BIOS mods](https://medium.com/@p0358/removing-
   * HP TPC-Q013
   * Lenovo Lite-On WCBN606BH
 
-All cards presented here require the following:
+这里提供的所有卡都需要满足以下要求:
 
 * [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup/releases)
 * [BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM/releases)
   * BrcmBluetoothInjector
-    * Do not use with macOS 12, use BlueToolFixup instead
-    * If you dual boot both macOS 11 or under and macOS 12, `MinKernel` and `MaxKernel` under `Kernel -> Add` in your config can be used to load one kext or the other in a specific OS
+    * 不要在macOS 12中使用，而是使用BlueToolFixup
+    * 如果你同时启动macOS 11或以下和macOS 12，配置文件中`Kernel -> Add`下的`MinKernel`和`MaxKernel`可以用来在特定的操作系统中加载一个或另一个kext
   * BrcmFirmwareData
   * BrcmPatchRAM fix:
-    * BrcmPatchRAM3 for macOS 10.14+ (must be paired with BrcmBluetoothInjector unless on macOS 12)
-    * BrcmPatchRAM2 for macOS 10.11-10.14
-    * BrcmPatchRAM for macOS 10.10 and older
+    * macOS 10.14+的BrcmPatchRAM3(必须与brcmbluetooth oothinjector配对，除非在macOS 12上)
+    * macOS 10.11-10.14的BrcmPatchRAM2
+    * macOS 10.10及更早版本的BrcmPatchRAM
   * BlueToolFixup:
-    * Used in place of BrcmBluetoothInjector on macOS 12
-    * See above dual booting note
+    * 在macOS 12上用于替代brcmbluetooth oothinjector
+    * 参见上面的双启动说明
 
-# Older models (not natively supported in Mojave)
+# 旧型号(Mojave不支持)
 
-With these models, you'll need to reinject the old plugin your wireless card used in High Sierra to work in Mojave. There are a couple of different kexts to do this but generally, we recommend avoiding these wireless cards.
+使用这些型号，你需要重新插入你的无线卡在High Sierra使用的旧插件才能在Mojave工作。有几个不同的kext可以做到这一点，但一般来说，我们建议避免使用这些无线卡。
 
-**Note**: Injecting the kext into macOS Catalina is even more unstable
+**注意**:将kext注入macOS Catalina会更加不稳定
 
 * **BCM94322**4 HMS/HMB (ABGN, 2x2:2)
   * Dell DW1520
