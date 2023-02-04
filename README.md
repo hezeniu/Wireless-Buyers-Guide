@@ -1,3 +1,3 @@
-# Wireless Buyers Guide
+# 无线买家指南
 
-So you've finally installed macOS onto your desktop/laptop/smart fridge, but you look towards the menubar and see a Bluetooth icon yet no wifi to go with. You immediately bolt to the Settings pane and see no Wi-Fi option and wonder where you may have gone wrong in your install. Scouring the inter-webs did provide an answer, but it was not that which you wanted to hear: "Your Wi-Fi card is shit, ANON!" said some user on a forum with far too many ads and a broken layout. They then proceeded to tell you how stupid you were to even think your wireless card would work. "How dare you not have the knowledge of Hackintosh hive mind!" This page should help clear some things up.
+你终于在你的电脑/笔记本/智能冰箱上安装了macOS，但你看了看菜单栏，看到了一个蓝牙图标，但没有wifi。你立即打开设置面板，发现没有Wi-Fi选项，想知道安装过程中哪里出了问题。在网上搜索确实找到了答案，但不是你想听到的:“你的Wi-Fi卡是狗屎!”某个论坛上的用户说，这个论坛上有太多的广告和一个破破烂烂的界面。然后他们继续告诉你你是多么愚蠢,甚至认为你的无线网卡是可行的。“你怎么敢不了解黑苹果蜂群思维!”这一页应该有助于澄清一些事情。
