@@ -58,6 +58,7 @@ module.exports = {
         repo: 'https://github.com/sumingyd/Wireless-Buyers-Guide',
         editLinks: true,
         editLinkText: '帮助我们改进此页!',
+        lastUpdated: '上次更新',
         logo: '/homepage.png',
         nav: [{
             text: '指南菜单',
